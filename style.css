@@ -92,18 +92,8 @@ h1 {
 
 .table-tournament th {
     color: #7a7a7a; /* Changing the header text color to gray */
+    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff; /* Adding white outline to the text */
     position: relative;
-}
-
-.table-tournament th::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: -1;
 }
 
 .table-tournament tbody tr:nth-child(odd) {
