@@ -92,7 +92,7 @@ h1 {
 
 .table-tournament th {
     color: #333333; /* Changing the header text color to gray */
-    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff; /* Adding white outline to the text */
+    
     position: relative;
     font-weight: normal;
 }
