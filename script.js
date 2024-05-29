@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchExcelFile('Monetary Transactions_conv.xlsx', handleConvFile);
     fetchExcelFile('Monetary Transactions_ret.xlsx', handleRetFile);
+
+    // Set timeout to refresh the page every 15 minutes
+    setTimeout(() => {
+        window.location.reload();
+    }, 900000); // 900000 milliseconds = 15 minutes
 });
 
 function fetchExcelFile(url, callback) {
