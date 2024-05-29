@@ -5,6 +5,10 @@ body {
     position: relative;
 }
 
+h1 {
+    color: #7a7a7a; /* Changing the header color to gray */
+}
+
 .background-animation {
     position: fixed;
     top: 0;
