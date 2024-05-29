@@ -154,10 +154,13 @@ function displayResult(sortedTransactionCounts, outputId, deskName) {
     thOwner.textContent = 'Transaction owner';
     const thCount = document.createElement('th');
     thCount.textContent = 'Number of transactions';
+    const thPrize = document.createElement('th');
+    thPrize.textContent = 'Prize (EUR)';
     
     headerRow.appendChild(thRank);
     headerRow.appendChild(thOwner);
     headerRow.appendChild(thCount);
+    headerRow.appendChild(thPrize);
     thead.appendChild(headerRow);
     table.appendChild(thead);
 
@@ -169,10 +172,13 @@ function displayResult(sortedTransactionCounts, outputId, deskName) {
         cellOwner.textContent = owner;
         const cellCount = document.createElement('td');
         cellCount.textContent = count;
+        const cellPrize = document.createElement('td');
+        cellPrize.textContent = `€${(count * 50).toFixed(2)}`;
         
         row.appendChild(cellRank);
         row.appendChild(cellOwner);
         row.appendChild(cellCount);
+        row.appendChild(cellPrize);
         tbody.appendChild(row);
     });
 
