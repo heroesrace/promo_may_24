@@ -66,7 +66,8 @@ h1 {
 }
 
 .table-tournament thead {
-    color: #fff;
+    color: #7a7a7a; /* Changing the header text color to gray */
+    border: 2px solid #fff; /* Adding a white border around the header text */
     transition: background-color 0.3s ease-in-out;
     background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red);
     background-size: 300% 300%;
@@ -88,6 +89,11 @@ h1 {
     padding: 12px;
     border: 1px solid #dee2e6;
     transition: background-color 0.3s ease-in-out;
+}
+
+.table-tournament th {
+    color: #7a7a7a; /* Changing the header text color to gray */
+    border: 2px solid #fff; /* Adding a white border around the header text */
 }
 
 .table-tournament tbody tr:nth-child(odd) {
