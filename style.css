@@ -92,7 +92,6 @@ h1 {
 
 .table-tournament th {
     color: #7a7a7a; /* Changing the header text color to gray */
-    border: 2px solid #fff; /* Adding a white border around the header text */
     position: relative;
 }
 
@@ -103,7 +102,6 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid #fff; /* White border around the text */
     pointer-events: none;
     z-index: -1;
 }
