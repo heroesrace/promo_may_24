@@ -70,7 +70,7 @@ h1 {
     transition: background-color 0.3s ease-in-out;
     background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red);
     background-size: 300% 300%;
-    animation: moving-header 15s linear infinite;
+    animation: moving-header 10s linear infinite;
 }
 
 @keyframes moving-header {
@@ -106,7 +106,7 @@ h1 {
     width: 110%;
     height: 110%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    filter: blur(15px); /* Blurred background */
+    filter: blur(20px); /* Blurred background */
     z-index: -1;
 }
 
