@@ -70,15 +70,18 @@ h1 {
     transition: background-color 0.3s ease-in-out;
     background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red);
     background-size: 300% 300%;
-    animation: moving-header 10s linear infinite;
+    animation: moving-header 15s linear infinite;
 }
 
 @keyframes moving-header {
     0% {
         background-position: 0% 50%;
     }
-    100% {
+    50% {
         background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
