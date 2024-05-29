@@ -98,7 +98,6 @@ h1 {
     background: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red); /* Gradient text */
     background-clip: text;
     -webkit-background-clip: text;
-    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff; /* White outline for readability */
 }
 
 .table-tournament tbody tr:nth-child(odd) {
