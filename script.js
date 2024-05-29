@@ -8,10 +8,10 @@ function fetchExcelFile(url, callback) {
         .then(response => response.arrayBuffer())
         .then(buffer => {
             const data = new Uint8Array(buffer);
-            const workbook = XLSX.read(data, { type: 'array' });
+            const workbook = XLSX.read(data, {type: 'array'});
             const firstSheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[firstSheetName];
-            const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+            const json = XLSX.utils.sheet_to_json(worksheet, {header: 1});
             callback(json);
         })
         .catch(error => console.error('Error fetching Excel file:', error));
@@ -21,15 +21,11 @@ function handleConvFile(data) {
     const transactionCountsIT = {};
     const transactionCountsENG = {};
 
-    const today = new Date();
-    const todayDateString = today.toISOString().split('T')[0];
-
     for (let i = 1; i < data.length; i++) {
         const desk = data[i][6];
         const owner = data[i][14];
-        const transactionDate = excelDateToJSDate(data[i][10]); // Предположим, что дата транзакции в столбце 10
 
-        if (owner && transactionDate.toISOString().split('T')[0] === todayDateString) {
+        if (owner) {
             if (desk === 'S IT CONV') {
                 if (!transactionCountsIT[owner]) {
                     transactionCountsIT[owner] = 0;
@@ -92,7 +88,7 @@ function handleRetFile(data) {
                 prize = 5000;
             } else if (dateString === todayDate) {
                 if (amount >= 5000 && amount < 10000) {
-                    prize = 5000;
+                    prize = 2500;
                 } else if (amount >= 10000 && amount < 25000) {
                     prize = 10000;
                 } else if (amount >= 25000) {
@@ -158,13 +154,10 @@ function displayResult(sortedTransactionCounts, outputId, deskName) {
     thOwner.textContent = 'Transaction owner';
     const thCount = document.createElement('th');
     thCount.textContent = 'Number of transactions';
-    const thPrize = document.createElement('th');
-    thPrize.textContent = 'Prize (EUR)';
     
     headerRow.appendChild(thRank);
     headerRow.appendChild(thOwner);
     headerRow.appendChild(thCount);
-    headerRow.appendChild(thPrize);
     thead.appendChild(headerRow);
     table.appendChild(thead);
 
@@ -176,13 +169,10 @@ function displayResult(sortedTransactionCounts, outputId, deskName) {
         cellOwner.textContent = owner;
         const cellCount = document.createElement('td');
         cellCount.textContent = count;
-        const cellPrize = document.createElement('td');
-        cellPrize.textContent = `€${(count * 50).toFixed(2)}`;
         
         row.appendChild(cellRank);
         row.appendChild(cellOwner);
         row.appendChild(cellCount);
-        row.appendChild(cellPrize);
         tbody.appendChild(row);
     });
 
