@@ -98,7 +98,7 @@ function handleRetFile(data) {
                 prize = 5000;
             } else if (dateString === todayDate) {
                 if (amount >= 5000 && amount < 10000) {
-                    prize = 2500;
+                    prize = 5000;
                 } else if (amount >= 10000 && amount < 25000) {
                     prize = 10000;
                 } else if (amount >= 25000) {
