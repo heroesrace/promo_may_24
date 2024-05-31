@@ -282,6 +282,7 @@ function addGameRules() {
         </ul>
         <p>POP will count only for South Africa sent to VALR</p>
         <p>All the rest the money should be in TODAY!</p>
+        <div class="good-luck">GOOD LUCK!</div>
     `;
     const rulesColumn = document.getElementById('rulesColumn');
     rulesColumn.appendChild(rulesContainer);
