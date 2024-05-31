@@ -137,6 +137,9 @@ function handleRetFile(data) {
 
     displayRetResult(sortedTransactionCountsIT, 'retOutput1', 'S IT RET');
     displayRetResult(sortedTransactionCountsENG, 'retOutput2', 'S ENG RET T1');
+
+    // Add rules
+    addGameRules();
 }
 
 function excelDateToJSDate(excelDate) {
@@ -254,6 +257,34 @@ function displayRetResult(sortedTransactionCounts, outputId, deskName) {
     table.appendChild(tbody);
     tableContainer.appendChild(table);
     output.appendChild(tableContainer);
+}
+
+function addGameRules() {
+    const rulesContainer = document.createElement('div');
+    rulesContainer.className = 'rules-container';
+    rulesContainer.innerHTML = `
+        <h2 class="text-center mt-4">Welcome to Marathon Day!</h2>
+        <p>Here are the rules and promotions for today!</p>
+        <h3>Prizes for Conversion</h3>
+        <ul>
+            <li>1 FTD - 50 euros</li>
+            <li>2 FTD- 100 euros</li>
+            <li>3 FTD - 150 euros</li>
+            <li>4 FTD - 200 euros</li>
+            <li>5 FTD- 250 euros</li>
+        </ul>
+        <h3>Prizes for Retention</h3>
+        <ul>
+            <li>2,500 from a NEW lead STD - get 5,000 to your numbers</li>
+            <li>5,000 gets 5,000 to your numbers</li>
+            <li>10,000 get 10,000 to your numbers</li>
+            <li>25,000 - gets 35,000 to your numbers</li>
+        </ul>
+        <p>POP will count only for South Africa sent to VALR</p>
+        <p>All the rest the money should be in TODAY!</p>
+    `;
+    const retOutput2 = document.getElementById('retOutput2');
+    retOutput2.parentNode.insertBefore(rulesContainer, retOutput2.nextSibling);
 }
 
 // Добавление значков доллара на фон
