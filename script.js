@@ -283,8 +283,8 @@ function addGameRules() {
         <p>POP will count only for South Africa sent to VALR</p>
         <p>All the rest the money should be in TODAY!</p>
     `;
-    const retOutput2 = document.getElementById('retOutput2');
-    retOutput2.parentNode.insertBefore(rulesContainer, retOutput2.nextSibling);
+    const rulesColumn = document.getElementById('rulesColumn');
+    rulesColumn.appendChild(rulesContainer);
 }
 
 // Добавление значков доллара на фон
